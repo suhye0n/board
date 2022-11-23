@@ -1,12 +1,12 @@
 package com.board.board.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class BoardController {
-
-    @GetMapping("/board/write") //localhost:8090/board/write
+    
+    @RequestMapping("/")
     public String boardWriteForm() {
         return "boardwrite";
     }
